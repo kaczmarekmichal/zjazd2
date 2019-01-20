@@ -92,10 +92,6 @@ def f9(x,y):
         return "roznych znakow"
     if x==0 or y== 0:
         return "zero"
-    if x==y:
-        return "rowne"
-    if x!=y:
-        return "rozne"
 
 
 def f10(x,y):

@@ -160,7 +160,7 @@ class klasa_testowa (unittest.TestCase):
                 w=przyklad.f9(-1,0)
                 self.assertEqual(w,"zero")
 
-    
+
             def test_f10_1(self):
                 w=przyklad.f10(1,1)
                 self.assertEqual(w,"rowne")
@@ -168,19 +168,6 @@ class klasa_testowa (unittest.TestCase):
             def test_f10_2(self):
                 w=przyklad.f10(1,2)
                 self.assertEqual(w,"rozne")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
