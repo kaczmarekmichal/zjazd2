@@ -27,7 +27,19 @@ class klasa_testowa (unittest.TestCase):
                 w=przyklad.f1(2,3)
                 self.assertEqual(w,7)
 
-            
+            def test_f2_1(self):
+                w=przyklad.f2('ala')
+                self.assertEqual(w,'a')
+
+            def test_f2_2(self):
+                w=przyklad.f2([1,2,3])
+                self.assertEqual(w,1)
+
+            def test_f2_3(self):
+                w=przyklad.f2([])
+                self.assertEqual(w,"BUUUM")
+
+
 
 if __name__ == '__main__':
     unnittest.main()
