@@ -1,4 +1,5 @@
 #! /usr/bin/python
+import re
 
 def f1(x,y=0):
     if y==0:
@@ -55,12 +56,18 @@ def f5 (x, y=0):
 def f6(x):
     return "*"*x
 
+
+# refactor code with regualar expressions only!
 def f7(x):
     if isinstance(x, str):
-        if x.isspace():
+        if re.search(" ",x):
             return "zdanie"
         else:
-            return "slowo"
+            if re.search("</",x):
+                    return "tag koncowy"
+            if re.search("<",x):
+                    return "tag poczatkowy"
+        return "slowo"
     if isinstance(x, int):
         if 0<=x<10:
             return "cyfra"
@@ -69,3 +76,30 @@ def f7(x):
                 return "liczba ze znakiem"
             else:
                 return "liczba"
+
+def f8(x, y):
+    if re.search(x,y):
+        return True
+    else:
+        return False
+
+def f9(x,y):
+    if x>0 and y>0:
+        return "dodatnie"
+    if x<0 and y<0:
+        return "ujemne"
+    if (x>0 and y<0) or (x<0 and y>0):
+        return "roznych znakow"
+    if x==0 or y== 0:
+        return "zero"
+    if x==y:
+        return "rowne"
+    if x!=y:
+        return "rozne"
+
+
+def f10(x,y):
+    if x==y:
+        return "rowne"
+    if x!=y:
+        return "rozne"

@@ -125,6 +125,56 @@ class klasa_testowa (unittest.TestCase):
                 w=przyklad.f7(-11111)
                 self.assertEqual(w,"liczba ze znakiem")
 
+            def test_f7_4(self):
+                w=przyklad.f7("Ala ma kota")
+                self.assertEqual(w,"zdanie")
+
+            def test_f7_5(self):
+                w=przyklad.f7("<taaag>")
+                self.assertEqual(w,"tag poczatkowy")
+
+            def test_f7_6(self):
+                w=przyklad.f7("</taaag>")
+                self.assertEqual(w,"tag koncowy")
+
+            def test_f8_1(self):
+                w=przyklad.f8("kot", "ala ma kota")
+                self.assertEqual(w,True)
+            def test_f8_2(self):
+                w=przyklad.f8("pies", "ala ma kota")
+                self.assertEqual(w,False)
+
+            def test_f9_1(self):
+                w=przyklad.f9(1,2)
+                self.assertEqual(w,"dodatnie")
+
+            def test_f9_2(self):
+                w=przyklad.f9(-1,-2)
+                self.assertEqual(w,"ujemne")
+
+            def test_f9_4(self):
+                w=przyklad.f9(-1,1)
+                self.assertEqual(w,"roznych znakow")
+
+            def test_f9_5(self):
+                w=przyklad.f9(-1,0)
+                self.assertEqual(w,"zero")
+
+    
+            def test_f10_1(self):
+                w=przyklad.f10(1,1)
+                self.assertEqual(w,"rowne")
+
+            def test_f10_2(self):
+                w=przyklad.f10(1,2)
+                self.assertEqual(w,"rozne")
+
+
+
+
+
+
+
 
 
 
