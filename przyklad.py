@@ -49,8 +49,9 @@ def f5 (x, y=0):
                 tablica.append(a)
             return tablica
     if y>1:
-        for a in range (x/y+1):
-            tablica.append(a*y)
+        for a in range (x):
+            if (a * y < x):
+                tablica.append(a*y)
         return tablica
 
 def f6(x):
