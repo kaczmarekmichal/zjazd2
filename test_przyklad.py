@@ -173,4 +173,4 @@ class klasa_testowa (unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unnittest.main()
+    unittest.main()
